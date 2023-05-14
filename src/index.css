@@ -147,3 +147,15 @@ form {
 	width: 100%;
 	height: 100%;
 }
+
+.movie__title {
+	margin-top: 8px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.movie__year {
+	font-style: italic;
+	color: rgb(185, 184, 184);
+}
