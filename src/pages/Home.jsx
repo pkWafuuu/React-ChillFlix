@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Movie from "../components/ui/Movie";
+import { Link, useNavigate } from "react-router-dom";
 
-function Home(){
+function Home({ searchMovies }){
 	// `https://www.omdbapi.com/?apikey=f5504bbb&s=${search}&type=${type}`
+	const navigate = useNavigate()
 	const [movies, setMovies] = useState([])
 
 	async function fetchMovies(){
@@ -25,7 +27,11 @@ function Home(){
 						HIGH QUALITY FLICKS TO <span className="text__color"><br/>WATCH</span> AND  
 						<span className="text__color"> CHILL</span>
 					</h1>
-					<form action="">
+					<form onSubmit={(event) => {
+						event.preventDefault()
+						searchMovies(event.target[0].value)
+						navigate("/browse")}}
+					>
 						<input type="text" name="search" className="form__input" />
 						<button className="form__btn">search</button>
 					</form>
