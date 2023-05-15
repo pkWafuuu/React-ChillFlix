@@ -8,14 +8,14 @@ function Home(){
 
 	async function fetchMovies(){
 		const { data } = await axios.get(
-			'https://www.omdbapi.com/?apikey=f5504bbb&s=fast'
+			'https://www.omdbapi.com/?apikey=f5504bbb&s=horror'
 			);
 		setMovies(data.Search)
 	}
 
 	useEffect(() => {
 		fetchMovies()
-	},[])
+	},[]);
 
 	return (
 		<section id="landing">
