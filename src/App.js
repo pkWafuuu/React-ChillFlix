@@ -7,19 +7,10 @@ import Home from "./pages/Home";
 
 function App() {
   const [search, setSearch] = useState("");
-	// const [movies, setMovies] = useState([]);
 
   function searchMovies(event) {
     setSearch(event);
   }
-
-  // async function fetchSearchedMovies() {
-  //   const { data } = await axios.get(
-  //     `https://www.omdbapi.com/?apikey=f5504bbb&s=${search}`
-  //   );
-  //   setMovies(data.Search);
-	// 	console.log(movies)
-  // }
 
   return (
     <Router>
