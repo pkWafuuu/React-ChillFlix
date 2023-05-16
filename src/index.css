@@ -258,14 +258,14 @@ form {
 }
 
 .movie__rating {
-	font-size: 2vw;
+	font-size: 1.7vw;
 	font-weight: 700;
 }
 
 .movie__genre {
 	margin-top: 5%;
 	width: 80%;
-	font-size: 2vw;
+	font-size: 1.3vw;
 	font-weight: 700;
 	text-align: center;
 }
@@ -273,7 +273,7 @@ form {
 .movie__btn {
 	background-color: #18acac;
 	color: #fff;
-	font-size: 1.3vw;
+	font-size: 1vw;
 	border: none;
 	margin-top: 26%;
 	padding: 8px 16px;

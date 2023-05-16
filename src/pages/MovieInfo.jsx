@@ -3,16 +3,10 @@ import axios from "axios";
 import { useState } from "react";
 import { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import Movie from "../components/ui/Movie";
 
 function MovieInfo({ movies }) {
   const { id } = useParams();
   const [movieInfo, setMovieInfo] = useState([]);
-  const [featured, setFeatured] = useState(movies);
-
-  function featuredMovies() {
-    setFeatured(movies.filter((movie) => movie.imdbID !== id));
-  }
 
   useEffect(() => {
     async function fetchMovieInfo() {
@@ -22,7 +16,6 @@ function MovieInfo({ movies }) {
       setMovieInfo(data);
     }
     fetchMovieInfo();
-    featuredMovies();
   }, [id]);
 
   return (
@@ -59,12 +52,15 @@ function MovieInfo({ movies }) {
                   </div>
                   <div className="movieInfo__people--container">
                     <div className="movieInfo__director--container">
-                      <div className="movieInfo__people">Director: <br/>
-											{movieInfo.Director}
-											</div>
+                      <div className="movieInfo__people">
+                        Director: <br />
+                        {movieInfo.Director}
+                      </div>
                     </div>
                     <div className="movieInfo__actors--container">
-                      <div className="movieInfo__people">Actors:<br/>
+                      <div className="movieInfo__people">
+                        Actors:
+                        <br />
                         {movieInfo.Actors}
                       </div>
                     </div>
@@ -80,18 +76,21 @@ function MovieInfo({ movies }) {
           <div className="movieInfo__feat--section">
             <div className="movieInfo__featured--title">Featured:</div>
             <div className="movieInfo__featured--container">
-              {featured.slice(0, 6).map((movie) => (
-                <div className="movieInfo__featured">
-                  <div className="movieInfo__feat--wrapper">
-                    <img src={movie.Poster} alt="" className="movie__img" />
-                    <div className="movie__info--container">
-                      <Link to={`/browse/${movie.imdbID}`}>
-                        <button className="featured__btn">View Info</button>
-                      </Link>
+              {movies
+                .filter((movie) => movie.imdbID !== id)
+                .slice(0, 6)
+                .map((movie) => (
+                  <div className="movieInfo__featured" key={movie.imdbID}>
+                    <div className="movieInfo__feat--wrapper">
+                      <img src={movie.Poster} alt="" className="movie__img" />
+                      <div className="movie__info--container">
+                        <Link to={`/browse/${movie.imdbID}`}>
+                          <button className="featured__btn">View Info</button>
+                        </Link>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
             </div>
           </div>
         </div>
