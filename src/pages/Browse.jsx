@@ -12,8 +12,8 @@ function Browse({ searchMovies, search }) {
   }
 
   function prevPage() {
-    if (page > 0) {
-      alert("ANO BA");
+    if (page <= 1) {
+      return;
     } else {
       setPage((prev) => prev - 1);
     }

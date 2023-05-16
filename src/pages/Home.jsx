@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Movie from "../components/ui/Movie";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Home({ searchMovies }){
 	// `https://www.omdbapi.com/?apikey=f5504bbb&s=${search}&type=${type}`

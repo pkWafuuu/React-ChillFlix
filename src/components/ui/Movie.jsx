@@ -5,14 +5,13 @@ function Movie({ movie }) {
 	const [movieInfo, setMovieInfo] = useState();
 	const [loading, setLoading] = useState(true)
 
-	async function fetchMovieInfo(){
-		const { data } = await axios.get(`https://www.omdbapi.com/?apikey=f5504bbb&i=${movie.imdbID}&plot=${movie.Type}`)
-		setMovieInfo(data);
-		setLoading(false)
-	}
-
 	useEffect(() => {
-		fetchMovieInfo()
+		async function fetchMovieInfo(){
+			const { data } = await axios.get(`https://www.omdbapi.com/?apikey=f5504bbb&i=${movie.imdbID}&plot=${movie.Type}`)
+			setMovieInfo(data);
+			setLoading(false)
+		}
+		fetchMovieInfo();
 	},[])
 
 	return (
