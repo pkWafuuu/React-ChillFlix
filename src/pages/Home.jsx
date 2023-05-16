@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Movie from "../components/ui/Movie";
 import { useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Home({ searchMovies }){
 	// `https://www.omdbapi.com/?apikey=f5504bbb&s=${search}&type=${type}`
@@ -33,7 +34,9 @@ function Home({ searchMovies }){
 						navigate("/browse")}}
 					>
 						<input type="text" name="search" className="form__input" />
-						<button className="form__btn">search</button>
+						<button className="form__btn">
+							<FontAwesomeIcon icon="magnifying-glass" className="icon" />
+						</button>
 					</form>
 				</header>
 				<div className="featured">
