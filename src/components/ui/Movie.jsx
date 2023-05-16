@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react"
+import { Link } from "react-router-dom";
 
 function Movie({ movie }) {
 	const [movieInfo, setMovieInfo] = useState();
@@ -25,7 +26,9 @@ function Movie({ movie }) {
 				<div className="movie__info--container">
 					<div className="movie__rating">{movieInfo.imdbRating}</div>
 					<div className="movie__genre">{movieInfo.Genre}</div>
-					<button className="movie__btn">View Info</button>
+					<Link to={`/browse/${movieInfo.imdbID}`}>
+						<button className="movie__btn">View Info</button>
+					</Link>
 				</div>
 			</div>
 			<div className="movie__title">{movie.Title}</div>

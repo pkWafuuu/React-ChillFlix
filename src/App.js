@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Nav from "./components/Nav";
 import Browse from "./pages/Browse";
 import Home from "./pages/Home";
+import MovieInfo from "./pages/MovieInfo";
 
 function App() {
   const [search, setSearch] = useState("");
@@ -21,13 +22,12 @@ function App() {
             path="/browse"
             element={
               <Browse
-                // fetchSearchedMovies={fetchSearchedMovies}
                 searchMovies={searchMovies}
-								// movies={movies}
 								search={search}
               />
             }
-          />
+					/>
+					<Route path="/browse/:id" element={<MovieInfo />} />
         </Routes>
       </div>
     </Router>

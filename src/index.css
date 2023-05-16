@@ -40,6 +40,10 @@ h2 {
 	text-align: center;
 }
 
+div {
+	color: #fff;
+}
+
 button {
 	border: none;
 }
@@ -294,5 +298,35 @@ form {
 	font-style: italic;
 	color: rgb(185, 184, 184);
 }
+
+/* 
+	
+	MOVIE INFO
+
+*/
+
+#movie-info {
+	min-height: calc(100vh - 120px);
+}
+
+.movieInfo__details {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 80px;
+	width: 100%;
+}
+
+.movieInfo__details--container {
+	width: 65%;
+}
+
+.movieInfo__title {
+	font-size: 40px;
+}
+
+.movieInfo__year {
+	margin-top: 32px;
+}
+
 
 
