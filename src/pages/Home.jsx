@@ -1,24 +1,24 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import axios from "axios";
 import Movie from "../components/ui/Movie";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-function Home({ searchMovies }){
+function Home({ searchMovies, movies }){
 	// `https://www.omdbapi.com/?apikey=f5504bbb&s=${search}&type=${type}`
 	const navigate = useNavigate()
-	const [movies, setMovies] = useState([])
+	// const [movies, setMovies] = useState([])
 
-	async function fetchMovies(){
-		const { data } = await axios.get(
-			'https://www.omdbapi.com/?apikey=f5504bbb&s=horror'
-			);
-		setMovies(data.Search)
-	}
+	// async function fetchMovies(){
+	// 	const { data } = await axios.get(
+	// 		'https://www.omdbapi.com/?apikey=f5504bbb&s=horror'
+	// 		);
+	// 	setMovies(data.Search)
+	// }
 
-	useEffect(() => {
-		fetchMovies()
-	},[]);
+	// useEffect(() => {
+	// 	fetchMovies()
+	// },[]);
 
 	return (
 		<section id="landing">
