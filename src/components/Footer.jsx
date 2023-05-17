@@ -22,10 +22,10 @@ function Footer() {
             <div className="footer__link--divider"></div>
             <div className="footer__link">
               <a
+                className="nav__link"
                 href="https://www.omdbapi.com/"
                 target="#"
-                className="nav__link"
-								rel="noreferrer"
+								rel="noopener noreferrer"
               >
                 API
               </a>
@@ -33,10 +33,10 @@ function Footer() {
             <div className="footer__link--divider"></div>
             <div className="footer__link">
               <a
+                className="nav__link"
                 href="https://github.com/pkWafuuu/React-ChillFlix"
                 target="#"
-                className="nav__link"
-								rel="noreferrer"
+								rel="noopener noreferrer"
               >
                 GitHub
               </a>

@@ -5,11 +5,11 @@ function Nav() {
   return (
     <nav>
       <div className="nav__row">
-        <a href="">
+        <Link to="/">
           <figure>
             <img src={logo} alt="Chill Flix Logo" className="nav__logo--img" />
           </figure>
-        </a>
+        </Link>
         <ul className="nav__link--list">
           <li>
             <Link to="/" className="nav__link">

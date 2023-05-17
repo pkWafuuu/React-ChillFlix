@@ -18,6 +18,7 @@ function Movie({ movie }) {
       }, 1000);
     }
     fetchMovieInfo();
+		// eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
