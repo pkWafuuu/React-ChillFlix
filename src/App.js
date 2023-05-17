@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Footer from "./components/Footer";
 import Nav from "./components/Nav";
 import Browse from "./pages/Browse";
 import Home from "./pages/Home";
@@ -43,6 +44,7 @@ function App() {
 					/>
 					<Route path="/browse/:id" element={<MovieInfo movies={movies}/>} />
         </Routes>
+				<Footer />
       </div>
     </Router>
   );
