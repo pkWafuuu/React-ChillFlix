@@ -37,6 +37,7 @@ li {
 
 h1 {
 	color: #fff;
+	font-size: 44px;
 }
 
 h2 {
@@ -133,7 +134,6 @@ header {
 
 .header__title {
 	text-align: center;
-	font-size: 48px;
 }
 
 form {
@@ -285,16 +285,22 @@ form {
 	transition: all 300ms ease;
 }
 
+.movie__rating--icon {
+	color: #18acac;
+	width: 30px;
+	height: 30px;
+}
+
 .movie__rating {
 	margin-top: 8px;
-	font-size: 1.5vw;
+	font-size: 24px;
 	font-weight: 700;
 }
 
 .movie__genre {
 	margin-top: 5%;
 	width: 80%;
-	font-size: 1.3vw;
+	font-size: 20px;
 	font-weight: 700;
 	text-align: center;
 }
@@ -302,7 +308,7 @@ form {
 .movie__btn {
 	background-color: #18acac;
 	color: #fff;
-	font-size: 1vw;
+	font-size: 16px;
 	border: none;
 	margin-top: 26%;
 	padding: 8px 16px;
@@ -337,13 +343,8 @@ form {
 
 */
 
-#movie-info {
-	min-height: calc(100vh - 120px);
-	padding: 0 12px;
-}
-
 .movie__info--row {
-	padding-top: 80px;
+	padding: 80px 24px;
 	max-width: 1200px;
 	margin: 0 auto;
 }
@@ -581,5 +582,23 @@ footer {
 	}
 	100% {
 		background-position: 0% 50%;
+	}
+}
+
+
+@media (max-width: 992px) {
+	.movieInfo__container{
+		flex-direction: column;
+		align-items: center;
+	}
+	.movieInfo__feat--section{
+		margin-top: 32px;
+		max-width: 100%;
+	}
+	.movieInfo__featured{
+		width: calc((100%/6));
+	}
+	.movieInfo__featured--title{
+		text-align: center;
 	}
 }

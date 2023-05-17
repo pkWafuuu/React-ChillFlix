@@ -33,7 +33,7 @@ function Movie({ movie }) {
           <div className="movie__wrapper">
             <img src={movie.Poster} alt="No Poster" className="movie__img" />
             <div className="movie__info--container">
-							<FontAwesomeIcon icon="star" className="movieInfo__icon" />
+							<FontAwesomeIcon icon="star" className="movie__rating--icon" />
               <div className="movie__rating">{movieInfo.imdbRating}</div>
               <div className="movie__genre">{movieInfo.Genre}</div>
               <Link to={`/browse/${movieInfo.imdbID}`}>
