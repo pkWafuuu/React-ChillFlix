@@ -31,7 +31,7 @@ function Footer() {
             <div className="footer__link--divider"></div>
             <div className="footer__link">
               <a
-                href="https://www.omdbapi.com/"
+                href="https://github.com/pkWafuuu/React-ChillFlix"
                 target="_blank"
                 className="nav__link"
               >
