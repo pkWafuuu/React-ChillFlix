@@ -1,12 +1,15 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Movie from "../components/ui/Movie";
+import browse from "../assets/browse.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Browse({ search }) {
-  const [newSearch, setNewSearch] = useState();
+  const [newSearch, setNewSearch] = useState(search);
   const [movies, setMovies] = useState();
   const [page, setPage] = useState(1);
+	const [error, setError] = useState('')
+	const [load, setLoad] = useState(false)
 
   function nextPage() {
     setPage((prev) => prev + 1);
@@ -22,7 +25,7 @@ function Browse({ search }) {
 
   function onSearch() {
 		if(page === 1){
-			fetchSearchedMovies();
+			fetchSearchedMovies()
 		} else {
 			setPage(1);
 		}
@@ -31,18 +34,27 @@ function Browse({ search }) {
   async function fetchSearchedMovies() {
     const { data } = await axios.get(
       `https://www.omdbapi.com/?apikey=f5504bbb&s=${
-        newSearch || search
+        newSearch
       }&page=${page}`
     );
-    setMovies(data.Search);
+		if(data.Response === 'True'){
+			setMovies(data.Search);
+			setLoad(true)
+		} else if(data.Response === 'False'){
+			setLoad(false)
+			setError(data.Error)
+		}
   }
 
   useEffect(() => {
-    fetchSearchedMovies();
+		if(!!newSearch){
+			fetchSearchedMovies();
+		}
   }, [page]);
 
   return (
-    <section id="browse">
+		<section id="browse">
+			{console.log(movies)}
       <div className="row">
         <div className="browse__container">
           <h1 className="browse__title">Browse <span className="text__color">Movies</span></h1>
@@ -59,7 +71,7 @@ function Browse({ search }) {
             </button>
           </div>
 
-          {movies ? (
+          {load ? (
             <>
               <div className="movie__list">
                 {movies.slice(0, 8).map((movie) => (
@@ -74,7 +86,7 @@ function Browse({ search }) {
                   className="page__input"
                   type="number"
                   value={page}
-                  onChange={(event) => {setPage(event.target.value); setPage(1)}}
+                  onChange={(event) => setPage(event.target.value)}
                 />
                 <button className="page__btn" onClick={() => nextPage()}>
                   <FontAwesomeIcon icon="greater-than" />
@@ -82,9 +94,18 @@ function Browse({ search }) {
               </div>
             </>
           ) : (
-            <>
-              <div>error can't find movie</div>
-            </>
+            <div className="browse__empty--container">
+              <figure className="browse__img--wrapper">
+								<img src={browse} alt="" className="browse__img"/>
+							</figure>
+							{error ? (
+								<div className="browse__msg">{error}</div>
+							) : (
+							<div className="browse__msg">
+								Search For Your <span className="text__color">Favorite</span> Movie
+							</div>)
+							}
+            </div>
           )}
         </div>
       </div>

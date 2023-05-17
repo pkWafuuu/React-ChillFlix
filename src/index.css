@@ -163,14 +163,15 @@ form {
 
 #browse {
 	min-height: calc(100vh - 120px);
+	display: flex;
+	align-items: center;
 }
 
 .browse__container {
 	display: flex;
-	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	padding-top: 40px;
+	padding: 32px 0;
 }
 
 .browse__search--container {
@@ -178,7 +179,21 @@ form {
 	width: 100%;
 	max-width: 500px;
 	margin-top: 12px;
-	
+}
+
+.browse__empty--container {
+	margin-top: 48px;
+}
+
+.browse__img {
+	width: 30vw;
+}
+
+.browse__msg {
+	text-align: center;
+	margin-top: 12px;
+	font-size: 24px;
+	font-weight: 700;
 }
 
 .page__container {
@@ -211,7 +226,6 @@ form {
 .movie__list {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
 	align-items: center;
 }
 
