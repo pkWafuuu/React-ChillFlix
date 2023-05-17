@@ -14,7 +14,10 @@ input::-webkit-inner-spin-button {
 }
 
 section {
-	background-color: #1a1919;
+	/* background-color: #1a1919; */
+	background: linear-gradient(-45deg, #195f5f, #202020, #1a1919, #114b4b);
+	animation: gradient 15s ease infinite;
+	background-size: 300% 300%;
 }
 
 
@@ -185,8 +188,13 @@ form {
 	margin-top: 48px;
 }
 
+.browse__img--wrapper {
+	display: flex;
+	justify-content: center;
+}
+
 .browse__img {
-	width: 30vw;
+	width: 500px;
 }
 
 .browse__msg {
@@ -272,7 +280,8 @@ form {
 }
 
 .movie__rating {
-	font-size: 1.7vw;
+	margin-top: 8px;
+	font-size: 1.5vw;
 	font-weight: 700;
 }
 
@@ -466,7 +475,57 @@ form {
 	margin-top: 4px;
 }
 
+/* 
+	
+	SKELETON LOADING STATES
 
+*/
 
+.movie__skeleton {
+	width: 25%;
+	padding: 24px;
+	color: #fff;
+}
 
+.skeleton {
+	background: linear-gradient(-90deg, #cfcece, #727071, #494949);
+	animation: gradient 3s ease infinite;
+	background-size: 400% 400%;
+	margin-bottom: 4px;
+}
 
+.movie__img--skeleton {
+	width: 202px;
+  height: 320px;
+  /* background-color: rgb(204, 204, 204); */
+  margin-bottom: 8px;
+	border-radius: 5px;
+}
+
+.movie__title--skeleton {
+	height: 21px;
+  width: 80%;
+}
+
+.movie__year--skeleton {
+	height: 21px;
+  width: 20%;
+}
+
+/* 
+	
+	ANIMATION
+
+*/
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
