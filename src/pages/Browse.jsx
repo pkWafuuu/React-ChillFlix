@@ -3,8 +3,8 @@ import { useEffect, useState } from "react";
 import Movie from "../components/ui/Movie";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-function Browse({ searchMovies, search }) {
-  const [newSearch, setNewSearch] = useState(search);
+function Browse({ search }) {
+  const [newSearch, setNewSearch] = useState();
   const [movies, setMovies] = useState();
   const [page, setPage] = useState(1);
 
@@ -21,10 +21,14 @@ function Browse({ searchMovies, search }) {
   }
 
   function onSearch() {
-    fetchSearchedMovies(newSearch);
+		if(page === 1){
+			fetchSearchedMovies();
+		} else {
+			setPage(1);
+		}
   }
 
-  async function fetchSearchedMovies(newSearch) {
+  async function fetchSearchedMovies() {
     const { data } = await axios.get(
       `https://www.omdbapi.com/?apikey=f5504bbb&s=${
         newSearch || search
@@ -70,7 +74,7 @@ function Browse({ searchMovies, search }) {
                   className="page__input"
                   type="number"
                   value={page}
-                  onChange={(event) => setPage(event.target.value)}
+                  onChange={(event) => {setPage(event.target.value); setPage(1)}}
                 />
                 <button className="page__btn" onClick={() => nextPage()}>
                   <FontAwesomeIcon icon="greater-than" />
