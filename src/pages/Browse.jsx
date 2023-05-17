@@ -62,6 +62,7 @@ function Browse({ search }) {
             <input
               type="text"
               className="form__input"
+							placeholder="Search:"
               value={newSearch}
               onKeyPress={(event) => event.key === "Enter" && onSearch()}
               onChange={(event) => setNewSearch(event.target.value)}

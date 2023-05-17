@@ -17,11 +17,6 @@ function Nav() {
             </Link>
           </li>
           <li>
-            <Link to="/browse" className="nav__link">
-              Trending
-            </Link>
-          </li>
-          <li>
             <Link to="/browse" className="nav__link nav__link--main">
               Browse
             </Link>
