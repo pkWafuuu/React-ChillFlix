@@ -23,7 +23,7 @@ function Footer() {
             <div className="footer__link">
               <a
                 href="https://www.omdbapi.com/"
-                target="_blank"
+                target="#"
                 className="nav__link"
 								rel="noreferrer"
               >
@@ -34,7 +34,7 @@ function Footer() {
             <div className="footer__link">
               <a
                 href="https://github.com/pkWafuuu/React-ChillFlix"
-                target="_blank"
+                target="#"
                 className="nav__link"
 								rel="noreferrer"
               >

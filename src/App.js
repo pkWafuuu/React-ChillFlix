@@ -15,14 +15,13 @@ function App() {
     setSearch(event);
   }
 
-	async function fetchMovies(){
-		const { data } = await axios.get(
-			'https://www.omdbapi.com/?apikey=f5504bbb&s=Avengers'
-			);
-		setMovies(data.Search)
-	}
-
 	useEffect(() => {
+		async function fetchMovies(){
+			const { data } = await axios.get(
+				'https://www.omdbapi.com/?apikey=f5504bbb&s=Avengers'
+				);
+			setMovies(data.Search)
+		}
 		fetchMovies()
 	},[]);
 	
