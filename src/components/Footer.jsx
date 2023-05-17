@@ -14,7 +14,7 @@ function Footer() {
           </div>
           <div className="footer__links">
             <div className="footer__link">
-              <Link to={"/browse"} className="nav__link">
+              <Link to={"/browse"} className="nav__link" >
                 Browse
               </Link>
             </div>
@@ -24,6 +24,7 @@ function Footer() {
                 href="https://www.omdbapi.com/"
                 target="_blank"
                 className="nav__link"
+								rel="noreferrer"
               >
                 API
               </a>
@@ -34,6 +35,7 @@ function Footer() {
                 href="https://github.com/pkWafuuu/React-ChillFlix"
                 target="_blank"
                 className="nav__link"
+								rel="noreferrer"
               >
                 GitHub
               </a>
