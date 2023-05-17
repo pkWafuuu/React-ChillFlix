@@ -80,6 +80,10 @@ nav {
 	margin: 0 auto;
 }
 
+.nav__logo--img {
+	height: 70px;
+}
+
 .nav__link--list {
 	display: flex;
 }
@@ -524,6 +528,17 @@ footer {
 	background-color: #131313;
 }
 
+.footer__logo {
+	height: 50px;
+}
+
+.footer__copyright {
+	text-align: center;
+	font-size: 12px;
+	color: #7a7a7a;
+	margin-top: 4px;
+}
+
 .footer__container {
 	display: flex;
 	justify-content: center;
@@ -545,7 +560,6 @@ footer {
 .footer__link--divider {
 	border-right: 1px solid #fff;
 	margin: 0 32px;
-	
 }
 
 /* 

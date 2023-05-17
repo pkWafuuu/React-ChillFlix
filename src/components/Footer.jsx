@@ -1,11 +1,14 @@
+import logo from "../assets/chillflix-logo.png"
+
+
 function Footer(){
 	return (
 		<footer>
 			<div className="row">
 				<div className="footer__container">
 					<div className="footer__logo--container">
-						<img src="" alt="chillflix" className="footer__logo" />
-						<div className="footer__copyright"></div>
+						<img src={logo} alt="chillflix" className="footer__logo" />
+						<div className="footer__copyright">Copyright &copy; 2023 ChillFlix</div>
 					</div>
 					<div className="footer__links">
 						<div className="footer__link">Browse</div>

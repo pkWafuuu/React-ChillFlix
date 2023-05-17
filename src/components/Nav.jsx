@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import logo from "../assets/chillflix-logo.png"
 
 function Nav() {
   return (
@@ -6,7 +7,7 @@ function Nav() {
       <div className="nav__row">
         <a href="">
           <figure>
-            <img src="" alt="Chill Flix Logo" className="nav__logo--img" />
+            <img src={logo} alt="Chill Flix Logo" className="nav__logo--img" />
           </figure>
         </a>
         <ul className="nav__link--list">
