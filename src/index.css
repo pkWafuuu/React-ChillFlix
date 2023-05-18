@@ -692,10 +692,24 @@ BREAKPOINTS
 	.nav__link {
 		display: none;
 	}
+	.movieInfo__img {
+		height: 350px;
+		width: 260px;
+	}
+	.movieInfo__main-details--container {
+		flex-direction: column;
+		align-items: center;
+	}
+	.movieInfo__details--container {
+		margin: 32px 0 0 0;
+	}
 	.movieInfo__feat--section {
 		width: 90%;
 	}
 	.movieInfo__feat--wrapper {
 		height: 150px;
+	}
+	.movieInfo__plot--container {
+		text-align: justify;
 	}
 }

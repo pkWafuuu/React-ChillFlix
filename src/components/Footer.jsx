@@ -14,13 +14,13 @@ function Footer() {
             </div>
           </div>
           <div className="footer__links">
-            <div className="footer__link">
+            <div>
               <Link to={"/browse"} className="footer__link" >
                 Browse
               </Link>
             </div>
             <div className="footer__link--divider"></div>
-            <div className="footer__link">
+            <div>
               <a
                 className="footer__link"
                 href="https://www.omdbapi.com/"
@@ -31,7 +31,7 @@ function Footer() {
               </a>
             </div>
             <div className="footer__link--divider"></div>
-            <div className="footer__link">
+            <div>
               <a
                 className="footer__link"
                 href="https://github.com/pkWafuuu/React-ChillFlix"
