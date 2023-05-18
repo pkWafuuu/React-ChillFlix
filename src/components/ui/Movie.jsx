@@ -1,11 +1,12 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Movie({ movie }) {
   const [movieInfo, setMovieInfo] = useState();
   const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
 
   useEffect(() => {
     async function fetchMovieInfo() {
@@ -38,8 +39,11 @@ function Movie({ movie }) {
                 <FontAwesomeIcon icon="star" className="movie__rating--icon" />
                 <div className="movie__rating">{movieInfo.imdbRating}</div>
                 <div className="movie__genre">{movieInfo.Genre}</div>
-                <button className="movie__btn">
-                  <Link to={`/browse/${movieInfo.imdbID}`} className="movie__link">View Info</Link>
+                <button
+                  className="movie__btn"
+                  onClick={() => navigate(`/browse/${movieInfo.imdbID}`)}
+                >
+                  View Info
                 </button>
               </div>
             </div>
