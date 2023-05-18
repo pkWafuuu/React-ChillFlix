@@ -18,7 +18,7 @@ function Movie({ movie }) {
       }, 1000);
     }
     fetchMovieInfo();
-		// eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -38,9 +38,9 @@ function Movie({ movie }) {
                 <FontAwesomeIcon icon="star" className="movie__rating--icon" />
                 <div className="movie__rating">{movieInfo.imdbRating}</div>
                 <div className="movie__genre">{movieInfo.Genre}</div>
-                <Link to={`/browse/${movieInfo.imdbID}`}>
-                  <button className="movie__btn">View Info</button>
-                </Link>
+                <button className="movie__btn">
+                  <Link to={`/browse/${movieInfo.imdbID}`} className="movie__link">View Info</Link>
+                </button>
               </div>
             </div>
             <div className="movie__title">{movie.Title}</div>

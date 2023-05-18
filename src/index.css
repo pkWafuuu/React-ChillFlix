@@ -52,12 +52,16 @@ div {
 
 button {
 	border: none;
+	cursor: pointer;
 }
 
 input {
 	border: none;
 	outline: none;
 }
+
+
+
 
 .icon {
 	width: 40px;
@@ -160,6 +164,12 @@ form {
 	background-color: #fff;
 	border-radius: 25px;
 	margin-left: 4px;
+	transition: transform 300ms ease;
+}
+
+
+.form__btn:hover{
+	transform: translateY(-3px);
 }
 
 .featured {
@@ -271,6 +281,10 @@ form {
 	visibility: visible;
 }
 
+.movie__link {
+	text-decoration: none;
+	color: inherit;
+}
 
 .movie__info--container {
 	position: absolute;
@@ -712,4 +726,5 @@ BREAKPOINTS
 	.movieInfo__plot--container {
 		text-align: justify;
 	}
+	
 }
