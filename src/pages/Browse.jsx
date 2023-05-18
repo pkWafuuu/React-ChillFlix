@@ -101,11 +101,11 @@ function Browse({ search }) {
 								<img src={browse} alt="" className="browse__img"/>
 							</figure>
 							{error ? (
-								<div className="browse__msg">{error}</div>
+								<h2 className="browse__msg">{error}</h2>
 							) : (
-							<div className="browse__msg">
+							<h3 className="browse__msg">
 								Search For Your <span className="text__color">Favorite</span> Movie
-							</div>)
+							</h3>)
 							}
             </div>
           )}
