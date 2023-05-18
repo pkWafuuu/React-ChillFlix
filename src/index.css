@@ -661,7 +661,7 @@ BREAKPOINTS
 	}
 	.movieInfo__feat--section {
 		margin-top: 32px;
-		max-width: 60%;
+		width: 65%;
 	}
 	.movieInfo__featured{
 		width: calc((100%/3));
@@ -669,6 +669,9 @@ BREAKPOINTS
 }
 
 @media (max-width: 576px) {
+	.movie {
+		width: 50%;
+	}
 	.nav__row {
 		height: 100px;
 	}
@@ -676,10 +679,10 @@ BREAKPOINTS
 		height: 40px;
 	}
 	.movie__wrapper {
-		height: 200px;
+		height: 250px;
 	}
 	.movie__img--skeleton {
-		height: 200px;
+		height: 250px;
 		width: 120px;
 	}
 	.browse__img {
@@ -688,5 +691,11 @@ BREAKPOINTS
 	}
 	.nav__link {
 		display: none;
+	}
+	.movieInfo__feat--section {
+		width: 90%;
+	}
+	.movieInfo__feat--wrapper {
+		height: 150px;
 	}
 }
