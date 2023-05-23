@@ -57,7 +57,6 @@ function Browse({ search }) {
 		<section id="browse">
 			{console.log(movies)}
       <div className="row">
-        <div className="browse__container">
           <h1 className="browse__title">Browse <span className="text__color">Movies</span></h1>
           <div className="browse__search--container">
             <input
@@ -72,7 +71,7 @@ function Browse({ search }) {
               <FontAwesomeIcon icon="magnifying-glass" className="icon" />
             </button>
           </div>
-
+        <div className="browse__container">
           {load ? (
             <>
               <div className="movie__list">

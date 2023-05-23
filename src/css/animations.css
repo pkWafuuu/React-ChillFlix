@@ -1,0 +1,53 @@
+
+@keyframes pulse {
+	0% {
+		transform: scale(0.9)
+	}
+	100% {
+		transform: scale(1.2);
+	}
+	
+}
+
+@keyframes fade-entry-left {
+	0% {
+		opacity: 0;
+		transform: translateX(-500px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes entry-from-right {
+	0% {
+		transform: translateX(500px);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@keyframes expand-then-normal {
+	0% {
+		transform: scale(0);
+	}
+	65% {
+			transform: scale(1.1);
+	}
+	100% {
+			transform: scale(1);
+	}
+}
+
+@keyframes fade-up {
+	0% {
+    opacity: 0;
+    transform: translateY(40px);
+ }   
+ 100% {
+    opacity: 1;
+    transform: translateY(0);
+ }
+}

@@ -3,9 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Home({ searchMovies, movies }) {
-
   const navigate = useNavigate();
-
 
   return (
     <section id="landing">
@@ -42,10 +40,12 @@ function Home({ searchMovies, movies }) {
           <h2 className="landing__featured">
             <span className="text__color">FEATURED:</span>
           </h2>
-          <div className="movie__list">
-            {movies.slice(0, 4).map((movie) => (
-              <Movie movie={movie} key={movie.imdbID} />
-            ))}
+          <div className="featured__movie--list">
+            <div className="movie__list">
+              {movies.slice(0, 4).map((movie) => (
+                <Movie movie={movie} key={movie.imdbID} />
+              ))}
+            </div>
           </div>
         </div>
       </div>

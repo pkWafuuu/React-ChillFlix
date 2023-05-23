@@ -1,3 +1,4 @@
+@import url(./css/animations.css);
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Staatliches&display=swap');
 
 input::-webkit-outer-spin-button,
@@ -60,9 +61,6 @@ input {
 	outline: none;
 }
 
-
-
-
 .icon {
 	width: 40px;
 }
@@ -89,10 +87,12 @@ nav {
 
 .nav__logo--img {
 	height: 70px;
+	animation: fade-entry-left 1000ms ease;
 }
 
 .nav__link--list {
 	display: flex;
+	animation: expand-then-normal 1000ms ease;
 }
 
 .nav__link {
@@ -143,6 +143,7 @@ header {
 
 .header__title {
 	text-align: center;
+	animation: fade-up 1000ms ease;
 }
 
 form {
@@ -151,6 +152,7 @@ form {
 	margin-top: 32px;
 	max-width: 550px;
 	width: 100%;
+	animation: fade-up 1000ms 500ms backwards;
 }
 
 .form__input {
@@ -177,6 +179,14 @@ form {
 	margin-top: 48px;
 }
 
+.landing__featured {
+	animation: fade-up 1000ms 700ms backwards;
+}
+
+.featured__movie--list {
+	animation: fade-up 1000ms 800ms backwards;
+}
+
 /* 
 	
 	BROWSE
@@ -193,7 +203,13 @@ form {
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-	padding: 32px 0;
+	padding-bottom: 32px;
+}
+
+.browse__title {
+	padding-top: 32px;
+	text-align: center;
+	animation: expand-then-normal 1000ms ease;
 }
 
 .browse__search--container {
@@ -202,10 +218,12 @@ form {
 	width: 100%;
 	max-width: 500px;
 	margin-top: 12px;
+	animation: fade-up 1000ms 500ms backwards;
 }
 
 .browse__empty--container {
 	margin-top: 48px;
+	animation: expand-then-normal 1000ms 1000ms backwards;
 }
 
 .browse__img--wrapper {

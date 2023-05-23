@@ -14,9 +14,7 @@ function Movie({ movie }) {
         `https://www.omdbapi.com/?apikey=f5504bbb&i=${movie.imdbID}&plot=${movie.Type}`
       );
       setMovieInfo(data);
-      setTimeout(() => {
-        setLoading(false);
-      }, 1000);
+      setLoading(false);
     }
     fetchMovieInfo();
     // eslint-disable-next-line react-hooks/exhaustive-deps
