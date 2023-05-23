@@ -209,7 +209,7 @@ form {
 .browse__title {
 	padding-top: 32px;
 	text-align: center;
-	animation: expand-then-normal 1000ms ease;
+	animation: fade-up 1000ms 200ms backwards;
 }
 
 .browse__search--container {
